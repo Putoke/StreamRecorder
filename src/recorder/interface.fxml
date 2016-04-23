@@ -1,0 +1,44 @@
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+
+<?import javafx.scene.control.Button?>
+<GridPane fx:controller="recorder.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="TOP_CENTER" hgap="10" vgap="10">
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+    <Text text="Länk till video: "
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="2" />
+
+    <TextField prefWidth="500" fx:id="link"
+        GridPane.columnIndex="2" GridPane.rowIndex="0"
+        GridPane.columnSpan="2" />
+
+    <Text text="Kvalitet: "
+          GridPane.columnIndex="0" GridPane.rowIndex="1"
+          GridPane.columnSpan="2" />
+
+    <ComboBox prefWidth="500" fx:id="qualities" maxWidth="Infinity"
+        GridPane.columnIndex="2" GridPane.rowIndex="1"
+        GridPane.columnSpan="2" />
+
+    <Text text="Filnamn: "
+          GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+    <TextField prefWidth="434" fx:id="filename" disable="true"
+               GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+    <Button text="Spara" onAction="#handleSaveButton" fx:id="save" disable="true"
+            GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+    <Text text="" fx:id="progress"
+          GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+    <Button text="Avbryt" fx:id="cancel" visible="false" onAction="#handleCancel"
+          GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+</GridPane>
