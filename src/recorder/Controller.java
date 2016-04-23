@@ -133,5 +133,3 @@ public class Controller implements Initializable {
         new File(filename).delete();
     }
 }
-
-// http://www.svtplay.se/video/7872057/true-detective/true-detective-sasong-2-avsnitt-6
